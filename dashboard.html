@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<title></title>
+	<link href="style-dash.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app-container">
+        <div class="app-header">
+          <div class="app-header-left">
+            <span class="app-icon"></span>
+            <p class="app-name">Stock Management System</p>
+            <div class="search-wrapper">
+              <input class="search-input" type="text" placeholder="Search">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="app-header-right">
+            <button class="mode-switch" title="Switch Theme">
+              <i class="fa fa-moon-o fa-2x" aria-hidden="true"></i>
+            </button>
+            <button class="add-btn" title="Add New Project"  data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-plus" aria-hidden="true" ></i>
+            </button>
+            <button class="notification-btn">
+              <i class="fa fa-bell-o fa-2x" aria-hidden="true"></i>
+            </button>
+            <button class="profile-btn" data-toggle="modal" data-target="#mypic">
+              <img src="https://sachinsharma2111.github.io/Home/favicon.png" />
+              <span>Sachin Sharma</span>
+            </button>
+          </div>
+          <button class="messages-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
+          </button>
+        </div>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="container">
+              <section>
+                <div class="wrapper">
+                <a href="" class="close">X</a>
+                <h1>Are you Admin</h1>
+                <p>On this site only Admin can Changes :)</p>
+                <button class="plus">Go on, click me.</button>
+              </div>
+                </section>
+</div>
+        </div>
+        <div class="modal" id="mypic">
+          <div class="container">
+            <div class="card" style="background: rgb(149,219,226);
+            background: linear-gradient(0deg, rgba(149,219,226,1) 0%, rgba(48,34,244,1) 100%); width: 300px; border-radius: 20px; margin-left: 70px;">
+              <img class="card-img-top" src="https://sachinsharma2111.github.io/Home/favicon.png" alt="Card image" style="width:auto">
+              <div class="card-body">
+                <p class="card-title">Sachin Sharma</p>
+                <p class="card-text"></p>
+                <a href="https://sachinsharma2111.github.io/Home/" class="btn btn-primary stretched-link">See Profile</a>
+                <a href="index.html" class="btn btn-primary stretched-link" style="margin-left: 50px; padding: 8px 22px;">Logout</a>
+              </div>
+            </div>
+          </div> 
+        </div>
+        <div class="app-content">
+          <div class="app-sidebar">
+            <a href="#" class="app-sidebar-link active">
+              <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="" class="app-sidebar-link">
+              <i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="" class="app-sidebar-link">
+              <i class="fa fa-calendar-o fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="" class="app-sidebar-link">
+              <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="projects-section">
+            <div class="projects-section-header">
+              <p>Products</p>
+              <p class="time" id="date">May, 12</p>
+            </div>
+            <div class="projects-section-line">
+              <div class="projects-status">
+                <div class="item-status">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='612' data-delay='5' data-increment="3"></div>
+                  <span class="status-type">Sale Orders</span>
+                </div>
+                <div class="item-status">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='122' data-delay='5' data-increment="3">0</div>
+                  <span class="status-type">Purchase Orders</span>
+                </div>
+                <div class="item-status">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='22' data-delay='5' data-increment="3">0</div>
+                  <span class="status-type">Item Registry</span>
+                </div>
+              <div class="item-status">
+                <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='64' data-delay='5' data-increment="3"></div>
+                <span class="status-type">Supplier Registry</span>
+              </div>
+            <div class="item-status">
+              <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='78' data-delay='5' data-increment="3"></div>
+              <span class="status-type">Staff Registry</span>
+            </div>
+          </div>
+              <div class="view-actions">
+                <button class="view-btn list-view" title="List View">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+                    <line x1="8" y1="6" x2="21" y2="6" />
+                    <line x1="8" y1="12" x2="21" y2="12" />
+                    <line x1="8" y1="18" x2="21" y2="18" />
+                    <line x1="3" y1="6" x2="3.01" y2="6" />
+                    <line x1="3" y1="12" x2="3.01" y2="12" />
+                    <line x1="3" y1="18" x2="3.01" y2="18" /></svg>
+                </button>
+                <button class="view-btn grid-view active" title="Grid View">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" /></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-boxes jsGridView">
+              <div class="project-box-wrapper" id="card">
+                <div class="project-box" style="background-color: #fee4cb;">
+                  <div class="project-box-header">
+                    <span>June 20, 2022</span>
+                    <div class="more-wrapper">
+                      <button class="project-btn-more" onclick="card()">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                </div>
+              </div>
+              <div class="project-box-content-header">
+                <p class="box-content-header">Purchase Record</p>
+                <p class="box-content-subheader">Prototyping</p>
+              </div>
+              <div class="box-progress-wrapper">
+                <p class="box-progress-header">Progress</p>
+                <div class="box-progress-bar">
+                  <span class="box-progress" style="width: 60%; background-color: #ff942e"></span>
+                </div>
+                <p class="box-progress-percentage">60%</p>
+              </div>
+              <div class="project-box-footer">
+                <div class="participants">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='78' data-delay='5' data-increment="3"></div>
+                </div>
+                <div class="days-left" style="color: #ff942e;">
+                  2 Days Left
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-box-wrapper" id="card-2">
+            <div class="project-box" style="background-color: #e9e7fd;">
+              <div class="project-box-header">
+                <span>July 10, 2022</span>
+                <div class="more-wrapper">
+                  <button class="project-btn-more" onclick="card2()">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="project-box-content-header">
+                <p class="box-content-header">Receiving Record</p>
+                <p class="box-content-subheader">Prototyping</p>
+              </div>
+              <div class="box-progress-wrapper">
+                <p class="box-progress-header">Progress</p>
+                <div class="box-progress-bar">
+                  <span class="box-progress" style="width: 50%; background-color: #4f3ff0"></span>
+                </div>
+                <p class="box-progress-percentage">50%</p>
+              </div>
+              <div class="project-box-footer">
+                <div class="participants">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='10' data-delay='5' data-increment="3"></div>
+                </div>
+                <div class="days-left" style="color: #4f3ff0;">
+                  2 Days Left
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-box-wrapper" id="card-3">
+            <div class="project-box">
+              <div class="project-box-header">
+                <span>July 10, 2022</span>
+                <div class="more-wrapper">
+                  <button class="project-btn-more" onclick="card3()">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="project-box-content-header">
+                <p class="box-content-header">Back Orders</p>
+                <p class="box-content-subheader">Prototyping</p>
+              </div>
+              <div class="box-progress-wrapper">
+                <p class="box-progress-header">Progress</p>
+                <div class="box-progress-bar">
+                  <span class="box-progress" style="width: 80%; background-color: #096c86"></span>
+                </div>
+                <p class="box-progress-percentage">80%</p>
+              </div>
+              <div class="project-box-footer">
+                <div class="participants">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='18' data-delay='5' data-increment="3"></div>
+                </div>
+                <div class="days-left" style="color: #096c86;">
+                  2 Days Left
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-box-wrapper" id="card-6">
+            <div class="project-box" style="background-color: #ffd3e2;">
+              <div class="project-box-header">
+                <span>August 10, 2022</span>
+                <div class="more-wrapper">
+                  <button class="project-btn-more" onclick="card6()">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="project-box-content-header">
+                <p class="box-content-header">Return Record</p>
+                <p class="box-content-subheader">Prototyping</p>
+              </div>
+              <div class="box-progress-wrapper">
+                <p class="box-progress-header">Progress</p>
+                <div class="box-progress-bar">
+                  <span class="box-progress" style="width: 20%; background-color: #df3670"></span>
+                </div>
+                <p class="box-progress-percentage">20%</p>
+              </div>
+              <div class="project-box-footer">
+                <div class="participants">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='7' data-delay='5' data-increment="3"></div>
+                </div>
+                <div class="days-left" style="color: #df3670;">
+                  2 Days Left
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-box-wrapper" id="card-4">
+            <div class="project-box" style="background-color: #c8f7dc;">
+              <div class="project-box-header">
+                <span>August 10, 2022</span>
+                <div class="more-wrapper">
+                  <button class="project-btn-more" onclick="card4()">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="project-box-content-header">
+                <p class="box-content-header">Sales Record</p>
+                <p class="box-content-subheader">Prototyping</p>
+              </div>
+              <div class="box-progress-wrapper">
+                <p class="box-progress-header">Progress</p>
+                <div class="box-progress-bar">
+                  <span class="box-progress" style="width: 60%; background-color: #34c471"></span>
+                </div>
+                <p class="box-progress-percentage">60%</p>
+              </div>
+              <div class="project-box-footer">
+                <div class="participants">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='20' data-delay='5' data-increment="3"></div>
+                </div>
+                <div class="days-left" style="color: #34c471;">
+                  2 Days Left
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-box-wrapper" id="card-5">
+            <div class="project-box" style="background-color: #d5deff;">
+              <div class="project-box-header">
+                <span>May 10, 2022</span>
+                <div class="more-wrapper">
+                  <button class="project-btn-more" onclick="card5()">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="project-box-content-header">
+                <p class="box-content-header">Supplier</p>
+                <p class="box-content-subheader">Prototyping</p>
+              </div>
+              <div class="box-progress-wrapper">
+                <p class="box-progress-header">Progress</p>
+                <div class="box-progress-bar">
+                  <span class="box-progress" style="width: 40%; background-color: #4067f9"></span>
+                </div>
+                <p class="box-progress-percentage">40%</p>
+              </div>
+              <div class="project-box-footer">
+                <div class="participants">
+                  <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='30' data-delay='5' data-increment="3"></div>
+                </div>
+                <div class="days-left" style="color: #4067f9;">
+                  2 Days Left
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="messages-section">
+        <button class="messages-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="15" y1="9" x2="9" y2="15" />
+            <line x1="9" y1="9" x2="15" y2="15" /></svg>
+        </button>
+        <div class="projects-section-header">
+          <p>Client Messages</p>
+        </div>
+        <div class="messages">
+          <div class="message-box" id="mbox1">
+            <img src="img/monika.jpeg" alt="profile image">
+            <div class="message-content">
+              <div class="message-header">
+                <div class="name">Monika Khadse</div>
+                <div class="star-checkbox">
+                  <input type="checkbox" id="star-1">
+                  <label for="star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                  </label>
+                </div>
+              </div>
+              <p class="message-line">
+                I got your first assignment. It was quite good. 🥳 We can continue with the next assignment.
+              </p>
+              <p class="message-line time"> Dec, 12
+                <button class="project-btn-more" onclick="card_msg1()">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>               
+              </p>
+            </div>
+          </div>
+          <div class="message-box" id="mbox2">
+            <img src="img/rishab.jpeg" alt="profile image">
+            <div class="message-content">
+              <div class="message-header">
+                <div class="name">Rishab Bajaj</div>
+                <div class="star-checkbox">
+                  <input type="checkbox" id="star-2">
+                  <label for="star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                  </label>
+                </div>
+              </div>
+              <p class="message-line">
+                Hey, can tell me about progress of project? I'm waiting for your response.
+              </p>
+              <p class="message-line time">
+                Dec, 12
+                <button class="project-btn-more" onclick="card_msg2()">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button> 
+              </p>
+            </div>
+          </div>
+          <div class="message-box" id="mbox3">
+            <img src="img/sachin.jpeg" alt="profile image">
+            <div class="message-content">
+              <div class="message-header">
+                <div class="name">Piyush Pathak</div>
+                <div class="star-checkbox">
+                  <input type="checkbox" id="star-3">
+                  <label for="star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                  </label>
+                </div>
+              </div>
+              <p class="message-line">
+                Awesome! 🤩 I like it. We can schedule a meeting for the next one.
+              </p>
+              <p class="message-line time">
+                Dec, 12
+                <button class="project-btn-more" onclick="card_msg3()">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button> 
+              </p>
+            </div>
+          </div>
+          <div class="message-box" id="mbox4">
+            <img src="img/garima.jpeg" alt="profile image">
+            <div class="message-content">
+              <div class="message-header">
+                <div class="name">Garima Joshi</div>
+                <div class="star-checkbox">
+                  <input type="checkbox" id="star-4">
+                  <label for="star-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                  </label>
+                </div>
+              </div>
+              <p class="message-line">
+                I am really impressed! Can't wait to see the final result.
+              </p>
+              <p class="message-line time">
+                Dec, 11
+                <button class="project-btn-more" onclick="card_msg4()">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button> 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="dash.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+      (function($){
+    $(window).on("load",function(){
+        $(document).scrollzipInit();
+        $(document).rollerInit();
+    });
+    $(window).on("load scroll resize", function(){
+        $('.numscroller').scrollzip({
+            showFunction    :   function() {
+                                    numberRoller($(this).attr('data-slno'));
+                                },
+            wholeVisible    :     false,
+        });
+    });
+    $.fn.scrollzipInit=function(){
+        $('body').prepend("<div style='position:fixed;top:0px;left:0px;width:0;height:0;' id='scrollzipPoint'></div>" );
+    };
+    $.fn.rollerInit=function(){
+        var i=0;
+        $('.numscroller').each(function() {
+            i++;
+           $(this).attr('data-slno',i); 
+           $(this).addClass("roller-title-number-"+i);
+        });        
+    };
+    $.fn.scrollzip = function(options){
+        var settings = $.extend({
+            showFunction    : null,
+            hideFunction    : null,
+            showShift       : 0,
+            wholeVisible    : false,
+            hideShift       : 0,
+        }, options);
+        return this.each(function(i,obj){
+            $(this).addClass('scrollzip');
+            if ( $.isFunction( settings.showFunction ) ){
+                if(
+                    !$(this).hasClass('isShown')&&
+                    ($(window).outerHeight()+$('#scrollzipPoint').offset().top-settings.showShift)>($(this).offset().top+((settings.wholeVisible)?$(this).outerHeight():0))&&
+                    ($('#scrollzipPoint').offset().top+((settings.wholeVisible)?$(this).outerHeight():0))<($(this).outerHeight()+$(this).offset().top-settings.showShift)
+                ){
+                    $(this).addClass('isShown');
+                    settings.showFunction.call( this );
+                }
+            }
+            if ( $.isFunction( settings.hideFunction ) ){
+                if(
+                    $(this).hasClass('isShown')&&
+                    (($(window).outerHeight()+$('#scrollzipPoint').offset().top-settings.hideShift)<($(this).offset().top+((settings.wholeVisible)?$(this).outerHeight():0))||
+                    ($('#scrollzipPoint').offset().top+((settings.wholeVisible)?$(this).outerHeight():0))>($(this).outerHeight()+$(this).offset().top-settings.hideShift))
+                ){
+                    $(this).removeClass('isShown');
+                    settings.hideFunction.call( this );
+                }
+            }
+            return this;
+        });
+    };
+    function numberRoller(slno){
+            var min=$('.roller-title-number-'+slno).attr('data-min');
+            var max=$('.roller-title-number-'+slno).attr('data-max');
+            var timediff=$('.roller-title-number-'+slno).attr('data-delay');
+            var increment=$('.roller-title-number-'+slno).attr('data-increment');
+            var numdiff=max-min;
+            var timeout=(timediff*1000)/numdiff;
+            //if(numinc<10){
+                //increment=Math.floor((timediff*1000)/10);
+            //}//alert(increment);
+            numberRoll(slno,min,max,increment,timeout);
+            
+    }
+    function numberRoll(slno,min,max,increment,timeout){//alert(slno+"="+min+"="+max+"="+increment+"="+timeout);
+        if(min<=max){
+            $('.roller-title-number-'+slno).html(min);
+            min=parseInt(min)+parseInt(increment);
+            setTimeout(function(){numberRoll(eval(slno),eval(min),eval(max),eval(increment),eval(timeout))},timeout);
+        }else{
+            $('.roller-title-number-'+slno).html(max);
+        }
+    }
+})(jQuery);
+    </script>
+</body>
+
+
+</html>
