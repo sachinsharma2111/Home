@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Table Program</title>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<style>
+</style>
+</head>
+  <h1 id="p">Hello</h1>
+  <button id="printInvoice" onclick="Popup()">Print</button>
+<body>
+<script>
+
+  function Popup() {
+   
+var prtContent = document.getElementById("p");
+var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+WinPrint.document.write(prtContent.innerHTML);
+WinPrint.document.close();
+WinPrint.focus();
+WinPrint.print();
+WinPrint.close();
+  }
+
+
+</script>
+
+</body>
+</html>
