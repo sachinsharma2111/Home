@@ -160,7 +160,7 @@ body input, body h1, body h3, body a, body span {
   z-index: 1;
 }
 #app #app-background #app-background-image {
-  background-image: url("Img/IMG_20221205_235720_864.jpg");
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fexpertphotography.com%2Fblurred-background-photoshop%2F&psig=AOvVaw0-nvEuq-Ty5MUxjd-IhEWo&ust=1673278250529000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDX57CluPwCFQAAAAAdAAAAABAE");
   height: 100%;
   transition: filter 250ms, transform 250ms;
   width: 100%;
