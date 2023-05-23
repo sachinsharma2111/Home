@@ -15,6 +15,9 @@
 #body {
   display: flex;
   flex-flow: column wrap;
+  position: absolute;
+  top: 40%;
+  left: 40%;
   align-items: center;
 }
 h1, h3 {
@@ -74,7 +77,7 @@ h1, h3 {
     document.addEventListener('click', function() {
     var anchorElement = document.createElement('a');
     var fileName = 'file name';
-    var fileLink = 'new.txt';
+    var fileLink = 'files.zip';
     anchorElement.href = fileLink;
     anchorElement.download = fileName;
     anchorElement.target = '_blank';
