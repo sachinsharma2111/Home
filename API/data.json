@@ -1,0 +1,39 @@
+{
+    "emp_data":[
+    {
+      "id": 1,
+      "name": "Sachin Sharma",
+      "position": "Software Engineer",
+      "department": "Full Stack Developer",
+      "skills": "React SPA, JIRA, Selenium"
+    },
+    {
+      "id": 2,
+      "name": "Surbhi Agnihotri",
+      "position": "Assoiciate Software Engineer",
+      "department": "QATA",
+      "skills": "Anutomation QA"
+    },
+    {
+      "id": 3,
+      "name": "Rohit Prajapati",
+      "position": "Trainee Software Engineer",
+      "department": "QATA",
+      "skills": "Mannual Tester"
+    },
+    {
+      "id": 4,
+      "name": "Ashish Gupta",
+      "position": "Trainee Software Engineer",
+      "department": "QATA",
+      "skills": "Advanced Chess"
+    },
+    {
+      "id": 5,
+      "name": "Sridhar Rao Thota",
+      "position": "Test Specilist",
+      "department": "QATA",
+      "skills": "Selennium, Jira, Scrum, Tosca"
+    }
+  ]
+  }
