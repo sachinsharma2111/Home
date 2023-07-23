@@ -5,7 +5,8 @@
       "name": "Sachin Sharma",
       "position": "Software Engineer",
       "department": "Full Stack Developer",
-      "skills": "React SPA, JIRA, Selenium"
+      "skills": "React SPA, JIRA, Selenium",
+        "city": "Hyderabad"
     },
     {
       "id": 2,
@@ -13,6 +14,7 @@
       "position": "Assoiciate Software Engineer",
       "department": "QATA",
       "skills": "Anutomation QA"
+        "city": "Hyderabad"
     },
     {
       "id": 3,
@@ -20,6 +22,7 @@
       "position": "Trainee Software Engineer",
       "department": "QATA",
       "skills": "Mannual Tester"
+        "city": "Hyderabad"
     },
     {
       "id": 4,
@@ -27,6 +30,7 @@
       "position": "Trainee Software Engineer",
       "department": "QATA",
       "skills": "Advanced Chess"
+        "city": "Hyderabad"
     },
     {
       "id": 5,
@@ -34,6 +38,7 @@
       "position": "Test Specilist",
       "department": "QATA",
       "skills": "Selennium, Jira, Scrum, Tosca"
+        "city": "Hyderabad"
     }
   ]
   }
